@@ -9,5 +9,6 @@ internal class Program
         Wave wave = new();
         SynthAx synth = new();
         synth.Wave(wave);
+        wave.Save();
     }
 }
