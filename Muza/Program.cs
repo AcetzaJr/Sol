@@ -5,10 +5,16 @@ internal class Program
 {
     private static void Main()
     {
-        Console.WriteLine("Hello, World!");
+        for (int note = -30; note <= 30; note++)
+        {
+            Console.WriteLine($"note {note} = {Acetza.Power(note)}");
+        }
+    }
+    public static void Fn()
+    {
         Wave wave = new();
-        SynthAx synth = new();
-        synth.Wave(wave);
+        SynthAx synth = new(wave);
+        synth.Write();
         wave.Save();
     }
 }
